@@ -62,6 +62,8 @@ node default {
   include mysql
   mysql::db { 'mydb': }
 
+  include php::5_5_22
+
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
