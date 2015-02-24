@@ -63,7 +63,7 @@ node default {
   mysql::db { 'mydb': }
 
   # Install PHP 55
-  include php::5_5_9
+  include php::5_5
 
   # Install Composer globally on your PATH
   include php::composer
