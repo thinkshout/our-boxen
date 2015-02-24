@@ -62,7 +62,11 @@ node default {
   include mysql
   mysql::db { 'mydb': }
 
-  include php::5_5_22
+  # Install PHP 55
+  include php::5_5_9
+
+  # Install Composer globally on your PATH
+  include php::composer
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
